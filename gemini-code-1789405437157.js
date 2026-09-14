@@ -1,64 +1,58 @@
-const canvas = document.getElementById("sciFiGameCanvas");
+const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 let score = 0;
 let highScore = 0;
-let gameRunning = false;
-let animationId;
+let running = false;
+let animId;
 
-// CAR-T Player Cell
+// CAR-T Player Object
 const player = {
-  x: 50,
-  y: 110,
-  w: 24,
-  h: 24,
-  speed: 4,
-  dy: 0
+  x: 40,
+  y: 65,
+  r: 10,
+  speed: 3.5
 };
 
 let bullets = [];
-let antigens = [];
-let particles = [];
-let spawnInterval = 75;
-let frames = 0;
+let obstacles = [];
+let frame = 0;
 
-function resetGame() {
-  player.y = 110;
-  player.dy = 0;
+function reset() {
+  player.y = 65;
   bullets = [];
-  antigens = [];
-  particles = [];
+  obstacles = [];
   score = 0;
-  frames = 0;
+  frame = 0;
   document.getElementById("game-score").innerText = "00000";
 }
 
 function startGame() {
   document.getElementById("game-overlay").style.display = "none";
-  resetGame();
-  gameRunning = true;
-  loop();
+  reset();
+  running = true;
+  tick();
 }
 
-function gameOver() {
-  gameRunning = false;
-  cancelAnimationFrame(animationId);
+function endGame() {
+  running = false;
+  cancelAnimationFrame(animId);
   if (score > highScore) {
     highScore = score;
     document.getElementById("game-high").innerText = String(highScore).padStart(5, '0');
   }
-  document.getElementById("overlay-msg").innerText = "RECEPTOR EXHAUSTED - TRY AGAIN";
-  document.getElementById("start-btn").innerText = "RE-ACTIVATE CAR-T";
+  document.getElementById("overlay-msg").innerText = "IMMUNOSUPPRESSION DETECTED";
+  document.querySelector(".overlay-modal p").innerText = "Game Over. Re-engage receptors to try again.";
+  document.querySelector(".btn-play").innerText = "RE-DEPLOY CAR-T";
   document.getElementById("game-overlay").style.display = "flex";
 }
 
-// Player Controls
 const keys = {};
 window.addEventListener("keydown", (e) => {
   keys[e.code] = true;
-  if (e.code === "Space" && gameRunning) {
-    // Fire Perforin Cytotoxic Particle
-    bullets.push({ x: player.x + player.w, y: player.y + player.h / 2, r: 4, speed: 7 });
+  if (e.code === "Space" && running) {
+    // Fire cytolytic granuoles
+    bullets.push({ x: player.x + 12, y: player.y, r: 3, speed: 6 });
     e.preventDefault();
   }
 });
@@ -66,118 +60,84 @@ window.addEventListener("keyup", (e) => {
   keys[e.code] = false;
 });
 
-function loop() {
-  if (!gameRunning) return;
-  frames++;
+function tick() {
+  if (!running) return;
+  frame++;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Player Movement
+  // Steer Player
   if (keys["ArrowUp"] || keys["KeyW"]) player.y -= player.speed;
   if (keys["ArrowDown"] || keys["KeyS"]) player.y += player.speed;
 
-  // Boundary checks
-  if (player.y < 0) player.y = 0;
-  if (player.y + player.h > canvas.height) player.y = canvas.height - player.h;
+  if (player.y - player.r < 0) player.y = player.r;
+  if (player.y + player.r > canvas.height) player.y = canvas.height - player.r;
 
-  // Render CAR-T Cell (Cyan Core with Antigen Receptor Spikes)
+  // Draw Player CAR-T cell
   ctx.fillStyle = "#38bdf8";
-  ctx.shadowColor = "#38bdf8";
-  ctx.shadowBlur = 10;
   ctx.beginPath();
-  ctx.arc(player.x + 12, player.y + 12, 12, 0, Math.PI * 2);
+  ctx.arc(player.x, player.y, player.r, 0, Math.PI * 2);
   ctx.fill();
-  ctx.shadowBlur = 0;
 
-  // Render CAR Receptors (Spikes)
+  // Draw TCR Receptors (Spikes)
   ctx.strokeStyle = "#ffffff";
   ctx.lineWidth = 2;
   ctx.beginPath();
-  ctx.moveTo(player.x + 24, player.y + 12);
-  ctx.lineTo(player.x + 30, player.y + 12);
+  ctx.moveTo(player.x + player.r, player.y);
+  ctx.lineTo(player.x + player.r + 6, player.y);
   ctx.stroke();
 
-  // Handle Bullets (Cytolytic Granules)
+  // Draw Projectiles
   ctx.fillStyle = "#a855f7";
-  bullets.forEach((b, index) => {
+  bullets.forEach((b, i) => {
     b.x += b.speed;
     ctx.beginPath();
     ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
     ctx.fill();
-    if (b.x > canvas.width) bullets.splice(index, 1);
+    if (b.x > canvas.width) bullets.splice(i, 1);
   });
 
-  // Spawn Target Antigens / Cancer Cells
-  if (frames % spawnInterval === 0) {
-    const size = Math.random() * 16 + 14;
-    antigens.push({
+  // Spawn Target / Pathogen
+  if (frame % 60 === 0) {
+    const size = Math.random() * 12 + 10;
+    obstacles.push({
       x: canvas.width,
-      y: Math.random() * (canvas.height - size),
-      w: size,
-      h: size,
-      speed: Math.random() * 2 + 1.8
+      y: Math.random() * (canvas.height - size * 2) + size,
+      r: size,
+      speed: Math.random() * 1.5 + 2
     });
   }
 
-  // Handle Antigens
-  antigens.forEach((a, aIdx) => {
-    a.x -= a.speed;
+  // Manage Pathogens
+  obstacles.forEach((ob, oIdx) => {
+    ob.x -= ob.speed;
 
-    // Render Tumor Antigen
+    // Draw pathogen / tumor antigen
     ctx.fillStyle = "#ef4444";
-    ctx.shadowColor = "#ef4444";
-    ctx.shadowBlur = 8;
-    ctx.fillRect(a.x, a.y, a.w, a.h);
-    ctx.shadowBlur = 0;
+    ctx.beginPath();
+    ctx.arc(ob.x, ob.y, ob.r, 0, Math.PI * 2);
+    ctx.fill();
 
     // Check collision with Player
-    if (
-      player.x < a.x + a.w &&
-      player.x + player.w > a.x &&
-      player.y < a.y + a.h &&
-      player.y + player.h > a.y
-    ) {
-      gameOver();
+    const dist = Math.hypot(player.x - ob.x, player.y - ob.y);
+    if (dist < player.r + ob.r) {
+      endGame();
     }
 
-    // Check collision with bullets
+    // Check collision with Bullets
     bullets.forEach((b, bIdx) => {
-      if (
-        b.x + b.r > a.x &&
-        b.x - b.r < a.x + a.w &&
-        b.y + b.r > a.y &&
-        b.y - b.r < a.y + a.h
-      ) {
-        // Cytolysis explosion effect
-        for (let i = 0; i < 6; i++) {
-          particles.push({
-            x: a.x,
-            y: a.y,
-            dx: (Math.random() - 0.5) * 4,
-            dy: (Math.random() - 0.5) * 4,
-            life: 20
-          });
-        }
-        antigens.splice(aIdx, 1);
+      const hitDist = Math.hypot(b.x - ob.x, b.y - ob.y);
+      if (hitDist < b.r + ob.r) {
+        obstacles.splice(oIdx, 1);
         bullets.splice(bIdx, 1);
         score += 100;
         document.getElementById("game-score").innerText = String(score).padStart(5, '0');
       }
     });
 
-    if (a.x + a.w < 0) {
-      antigens.splice(aIdx, 1);
+    if (ob.x + ob.r < 0) {
+      obstacles.splice(oIdx, 1);
     }
   });
 
-  // Particle explosion rendering
-  particles.forEach((p, pIdx) => {
-    p.x += p.dx;
-    p.y += p.dy;
-    p.life--;
-    ctx.fillStyle = "#f97316";
-    ctx.fillRect(p.x, p.y, 3, 3);
-    if (p.life <= 0) particles.splice(pIdx, 1);
-  });
-
-  animationId = requestAnimationFrame(loop);
+  animId = requestAnimationFrame(tick);
 }
