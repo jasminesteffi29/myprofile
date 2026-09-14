@@ -7,319 +7,428 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- HERO SECTION -->
-  <header class="hero-container">
-    <div class="banner-wrapper">
-      <img src="assets/banner.jpg" alt="Banner Landscape" class="banner-img" />
-    </div>
-    <div class="profile-card">
-      <div class="avatar-wrapper">
-        <img src="assets/profile.jpg" alt="Jasmine Steffi A" class="avatar-img" />
-        <span class="status-indicator" title="Available for PhD / Research"></span>
+  <main class="page-container">
+    <section class="hero-section card">
+      <div class="banner-container">
+        <img src="assets/banner.jpg" alt="Banner background" class="banner-img" />
       </div>
-      <div class="profile-info">
-        <div class="profile-title">
-          <h1>Jasmine Steffi A</h1>
-          <p class="role-badge">M.Tech in Biotechnology · First-Class Distinction</p>
+      <div class="hero-content">
+        <div class="avatar-holder">
+          <img src="assets/profile.jpg" alt="Jasmine Steffi A" class="avatar-img" />
+          <span class="online-indicator"></span>
         </div>
-        <div class="meta-row">
-          <span class="location">📍 Tamil Nadu, India</span>
-          <a href="mailto:jasminesteffi29@gmail.com" class="chip-link">jasminesteffi29@gmail.com</a>
-          <span class="chip-link">(+91) 6380690487</span>
-        </div>
-        <p class="bio-summary">
-          Biotechnology postgraduate with specialized wet-lab training in cellular immunology, mammalian macrophage assays, and biomaterial-based targeted therapeutics. Driven to engineer next-generation cancer immunotherapies.
-        </p>
-      </div>
-    </div>
-  </header>
-
-  <!-- FEATURED HIGHLIGHTS CAROUSEL -->
-  <section class="section carousel-section">
-    <div class="section-header">
-      <span class="eyebrow">Visual Highlights</span>
-      <h2>Research, Wet-Lab Work & Scientific Outreach</h2>
-    </div>
-    <div class="carousel-container">
-      <!-- Card 1: Video -->
-      <div class="carousel-card">
-        <div class="media-frame">
-          <video src="assets/lab_video.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="card-details">
-          <span class="tag-year">2026</span>
-          <h4>Mammalian Cell Culture & Cleanroom Operations</h4>
-          <p>Aseptic biosafety operations, subculturing, and preparation for macrophage functional assays.</p>
-          <div class="pill-group">
-            <span>RAW 264.7</span><span>Aseptic Prep</span><span>Cellular Assays</span>
+        <div class="hero-body">
+          <div class="hero-primary">
+            <div class="hero-titles">
+              <h1>Jasmine Steffi A</h1>
+              <p class="subtitle">M.Tech Biotechnology (2024 – 2026) · Rank Holder</p>
+            </div>
+            <div class="location-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Tamil Nadu, India</span>
+            </div>
+            <p class="hero-bio">
+              Biotechnology postgraduate with specialized experimental training in cellular immunology, mammalian macrophage models, and targeted therapeutics. Proven wet-lab track record in quantifying immunomodulatory responses, nanoparticle biosynthesis, and biomaterial drug delivery.
+            </p>
+          </div>
+          <div class="hero-links">
+            <a href="tel:+916380690487" class="contact-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              (+91) 6380690487
+            </a>
+            <a href="mailto:jasminesteffi29@gmail.com" class="contact-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              jasminesteffi29@gmail.com
+            </a>
+            <a href="assets/resume.pdf" download class="contact-btn resume-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Resume (PDF)
+            </a>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Card 2: Bench Work -->
-      <div class="carousel-card">
-        <div class="media-frame">
-          <img src="assets/wetlab_bench.jpg" alt="Aseptic Hood Work" />
-        </div>
-        <div class="card-details">
-          <span class="tag-year">2025</span>
-          <h4>Microbial & Nanoparticle Assays</h4>
-          <p>Laminar flow manipulation for anti-inflammatory assays and nanoparticle-biofilm interactions.</p>
-          <div class="pill-group">
-            <span>Biosafety Cabinet</span><span>Nanotechnology</span><span>Assays</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3: Symposium -->
-      <div class="carousel-card">
-        <div class="media-frame">
-          <img src="assets/cscr_symposium.jpg" alt="Cell and Gene Therapy Symposium" />
-        </div>
-        <div class="card-details">
-          <span class="tag-year">2025</span>
-          <h4>10th Annual Cell & Gene Therapy Symposium</h4>
-          <p>Centre for Stem Cell Research (CMC Vellore / BRIC-inStem) attending translational medicine tracks.</p>
-          <div class="pill-group">
-            <span>Stem Cells</span><span>Gene Therapy</span><span>Conferences</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT & SKILLS -->
-  <section class="section">
-    <div class="section-header">
-      <span class="eyebrow">Technical Profile</span>
-      <h2>Core Experimental Competencies</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3>Cell Culture & In Vitro Assays</h3>
-        <div class="tags-cloud">
-          <span>RAW 264.7 Macrophage Lines</span>
-          <span>Cancer Cell Models</span>
-          <span>Aseptic Handling</span>
-          <span>Cryopreservation</span>
-          <span>MTT & Trypan Blue Assays</span>
-          <span>Immunomodulatory Screening</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Molecular Biology & Analytical Platforms</h3>
-        <div class="tags-cloud">
-          <span>Genomic DNA/RNA Isolation</span>
-          <span>RT-qPCR Primer Design</span>
-          <span>SDS-PAGE & Western Blot</span>
-          <span>Microencapsulation</span>
-          <span>GC-MS Profiling</span>
-          <span>UV-Vis & FTIR</span>
-          <span>Dynamic Light Scattering (DLS)</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Informatics & Design</h3>
-        <div class="tags-cloud">
-          <span>NCBI BLAST</span>
-          <span>Molecular Pathway Mapping</span>
-          <span>GraphPad Prism</span>
-          <span>BioRender Illustration</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPANDABLE RESEARCH PROJECTS -->
-  <section class="section">
-    <div class="section-header">
-      <span class="eyebrow">Key Investigations</span>
-      <h2>Research Projects</h2>
-    </div>
-    <div class="projects-list">
-      
-      <div class="expand-card">
-        <div class="expand-header" onclick="toggleCard(this)">
-          <div>
-            <span class="card-kicker">M.Tech Thesis</span>
-            <h4>Biosynthesis of Nanoparticles & Anti-Inflammatory Screening in Mammalian Macrophages</h4>
-          </div>
-          <button class="expand-btn">Expand</button>
-        </div>
-        <div class="expand-body">
-          <p>Investigated immunomodulatory properties of biosynthesized therapeutic formulations using in vitro RAW 264.7 macrophage models.</p>
-          <ul>
-            <li>Quantitative cellular assays evaluating protection and inflammation suppression.</li>
-            <li>Coordinated GC-MS metabolite profiling with SITRA to isolate chemical constituents.</li>
-            <li>Evaluated reactive oxygen species (ROS) and cytokine modulations.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="expand-card">
-        <div class="expand-header" onclick="toggleCard(this)">
-          <div>
-            <span class="card-kicker">Cancer Biology</span>
-            <h4>Non-Canonical Functions of Telomerase in Mitochondria</h4>
-          </div>
-          <button class="expand-btn">Expand</button>
-        </div>
-        <div class="expand-body">
-          <p>Analyzed mitochondrial stress response and mitophagy using mitoKeima assays in U-2 OS osteosarcoma cell lines.</p>
-          <ul>
-            <li>Investigated extra-telomeric protective roles of TERT in mitochondrial maintenance.</li>
-            <li>Assessed metabolic resilience in cancer phenotypes during oxidative stress.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="expand-card">
-        <div class="expand-header" onclick="toggleCard(this)">
-          <div>
-            <span class="card-kicker">UCT Prague Exchange</span>
-            <h4>Alliin-Alliinase Microparticles Against Escherichia coli Biofilms</h4>
-          </div>
-          <button class="expand-btn">Expand</button>
-        </div>
-        <div class="expand-body">
-          <p>Synthesized spray-dried microparticle formulations facilitating controlled in situ generation of allicin as a biofilm disruptive agent.</p>
-          <ul>
-            <li>Engineered microencapsulation for enzyme stability and sustained release.</li>
-            <li>Conducted quantitative bacterial biofilm eradication protocols.</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TIMELINE: EXPERIENCE & EDUCATION -->
-  <section class="section">
-    <div class="two-col-grid">
-      <div>
-        <div class="section-header">
-          <span class="eyebrow">Trajectory</span>
-          <h2>Experience</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-date">Jul 2025 – Sep 2025</span>
-            <h4>Exchange Research Intern</h4>
-            <p class="timeline-sub">University of Chemistry & Technology (UCT Prague), Czech Republic</p>
-            <p>Developed spray-dried microparticles targeting E. coli biofilms; formulated biomaterial systems.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">June 2023</span>
-            <h4>Microbial Techniques Trainee</h4>
-            <p class="timeline-sub">Azyme Biotech, Bangalore</p>
-            <p>Clinical microbiology isolation and biochemical verification assays.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">May 2022</span>
-            <h4>Regenerative Medicine Trainee</h4>
-            <p class="timeline-sub">Nichi-In Centre for Regenerative Medicine, Chennai</p>
-            <p>Practical cleanroom operations and Class III Biosafety Cabinet handling.</p>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="section-header">
-          <span class="eyebrow">Academic Background</span>
-          <h2>Education</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-date">2024 – 2026</span>
-            <h4>M.Tech in Biotechnology</h4>
-            <p class="timeline-sub">Karunya Institute of Technology and Sciences</p>
-            <p>Rank Holder · 85.3% First-Class Distinction</p>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">2020 – 2024</span>
-            <h4>B.Tech in Biotechnology</h4>
-            <p class="timeline-sub">Karunya Institute of Technology and Sciences</p>
-            <p>84.6% First-Class Distinction</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS & HONORS -->
-  <section class="section">
-    <div class="two-col-grid">
-      <div>
-        <div class="section-header">
-          <span class="eyebrow">Dissemination</span>
-          <h2>Publications & Preprints</h2>
-        </div>
-        <div class="pub-card">
-          <span class="badge">Peer-Reviewed</span>
-          <p><strong>Kanimozhi D, Mathew J, Antu AR, Jasmine Steffi A, Arya K.</strong> An Exploratory In Silico Screening of Potentially Deleterious SNPs in the Human CDH1 Gene. <em>Int. J. Drug Deliv. Technol.</em> (2026).</p>
-        </div>
-        <div class="pub-card">
-          <span class="badge">Preprint</span>
-          <p><strong>Das S, Dubey A, Laney K, Kompala J, Jasmine Steffi A, et al.</strong> Emodin as a Multi-Target Modulator of Tumor Angiogenesis. <em>Cambridge Open Engage</em> (2026).</p>
-        </div>
-      </div>
-
-      <div>
-        <div class="section-header">
-          <span class="eyebrow">Honors</span>
-          <h2>Awards & Fellowships</h2>
-        </div>
-        <ul class="styled-list">
-          <li><strong>UGC National Scholarship for Postgraduate Studies (NSPG)</strong> (2024–2026)</li>
-          <li><strong>IAESTE International Fellowship Award</strong> (Prague, 2025)</li>
-          <li><strong>GATE Biotechnology Qualified</strong> (2025)</li>
-          <li><strong>IIT Madras Molecular Biology Training</strong> — Shortlisted Candidate (2026)</li>
-          <li><strong>Karunya Merit Scholarship</strong> (2020–2024)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- IMMUNOLOGY SCI-FI GAME -->
-  <section class="section game-container-section">
-    <div class="game-wrapper">
-      <div class="game-header">
+    <!-- FEATURED HIGHLIGHTS CAROUSEL -->
+    <section class="section">
+      <div class="section-top">
         <div>
-          <span class="scifi-badge">SYSTEM DIAGNOSTIC: READY</span>
-          <h3 class="scifi-title">CAR-T IMMUNO-DEFENSE</h3>
-          <p class="scifi-sub">Eliminate tumor microenvironment threats. Use <strong>[W/S]</strong> or <strong>[↑/↓]</strong> to steer, <strong>[Spacebar]</strong> to fire Perforin/Granzyme Blasts.</p>
-        </div>
-        <div class="scoreboard">
-          <div class="score-item">SCORE <span id="game-score">00000</span></div>
-          <div class="score-item">HIGH <span id="game-high">00000</span></div>
+          <span class="sub-label">Featured Highlights</span>
+          <h2 class="section-title">Research, leadership, and scientific outreach</h2>
         </div>
       </div>
-      
-      <div class="canvas-holder">
-        <canvas id="sciFiGameCanvas" width="760" height="260"></canvas>
-        <div id="game-overlay" class="overlay">
-          <h2 id="overlay-msg">CAR-T RECEPTOR ENGAGED</h2>
-          <button id="start-btn" onclick="startGame()">INITIATE CYTOLYSIS</button>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <footer>
-    <p>© 2026 Jasmine Steffi A · Engineered for GitHub Pages</p>
-  </footer>
+      <div class="carousel-scroll">
+        <!-- Slide 1: Lab Video -->
+        <div class="carousel-item card">
+          <div class="carousel-media">
+            <video src="assets/lab_video.mp4" autoplay loop muted playsinline></video>
+          </div>
+          <div class="carousel-info">
+            <div class="card-meta">
+              <span class="pill-year">2026</span>
+            </div>
+            <h3>Cleanroom & Cell Culture Workflow</h3>
+            <p>Aseptic biosafety handling, cryopreservation, and mammalian cell propagation for in vitro macrophage assays.</p>
+            <div class="tag-row">
+              <span class="badge">RAW 264.7</span>
+              <span class="badge">Aseptic Hood</span>
+              <span class="badge">Cellular Assays</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Lab Bench Benchwork -->
+        <div class="carousel-item card">
+          <div class="carousel-media">
+            <img src="assets/wetlab_bench.jpg" alt="Laminar Airflow Assay" />
+          </div>
+          <div class="carousel-info">
+            <div class="card-meta">
+              <span class="pill-year">2025</span>
+            </div>
+            <h3>Nanoparticle & In Vitro Anti-Inflammatory Assays</h3>
+            <p>Performing serial dilutions, bacterial streak plates, and cell viability assays within laminar airflow hoods.</p>
+            <div class="tag-row">
+              <span class="badge">MTT Assay</span>
+              <span class="badge">Nanotechnology</span>
+              <span class="badge">Biofilm Testing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Conference / Symposium -->
+        <div class="carousel-item card">
+          <div class="carousel-media">
+            <img src="assets/cscr_symposium.jpg" alt="10th Cell & Gene Therapy Symposium" />
+          </div>
+          <div class="carousel-info">
+            <div class="card-meta">
+              <span class="pill-year">2025</span>
+            </div>
+            <h3>10th Annual Cell and Gene Therapy Symposium</h3>
+            <p>Centre for Stem Cell Research (CMC Vellore / inStem) engaging in cellular therapies and translational platforms.</p>
+            <div class="tag-row">
+              <span class="badge">Stem Cells</span>
+              <span class="badge">Gene Therapy</span>
+              <span class="badge">Conferences</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & SKILLS -->
+    <section class="section">
+      <div class="about-grid">
+        <div class="card about-bio-card">
+          <span class="sub-label">About</span>
+          <p class="lead-text">
+            Detail-oriented and innovative biotechnology researcher with proven experimental execution across mammalian cell models, targeted drug delivery platforms, and translational immunology. Eager to advance cancer therapeutics and immune-biomaterial interfaces.
+          </p>
+        </div>
+
+        <div class="card skills-card">
+          <span class="sub-label">Skills</span>
+          <div class="tag-row">
+            <span class="badge">Mammalian Cell Culture</span>
+            <span class="badge">RAW 264.7 Models</span>
+            <span class="badge">Aseptic Techniques</span>
+            <span class="badge">MTT & Cytotoxicity Assays</span>
+            <span class="badge">Western Blotting & SDS-PAGE</span>
+            <span class="badge">RT-qPCR Primer Design</span>
+            <span class="badge">Spray-Drying Microparticles</span>
+            <span class="badge">GC-MS & UV-Vis Analysis</span>
+            <span class="badge">FTIR & DLS Characterization</span>
+            <span class="badge">GraphPad Prism</span>
+            <span class="badge">BioRender Illustration</span>
+            <span class="badge">Scientific Communication</span>
+          </div>
+        </div>
+
+        <div class="card cert-card">
+          <span class="sub-label">Key Competencies & Domains</span>
+          <div class="bullet-grid">
+            <div>• Cellular Immunology & Macrophage Assays</div>
+            <div>• Targeted Microencapsulation & Biomaterials</div>
+            <div>• Molecular Cancer Biology (TERT & Mitophagy)</div>
+            <div>• Green Synthesis of Nanoparticles</div>
+            <div>• Biofilm Eradication Screening</div>
+            <div>• Class III Biosafety Cabinet Protocols</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED WORK (ACCORDION CARDS) -->
+    <section class="section">
+      <div class="section-top">
+        <div>
+          <span class="sub-label">Featured work</span>
+          <h2 class="section-title">Research Projects</h2>
+        </div>
+        <a href="assets/resume.pdf" download class="btn-outline">Download Resume</a>
+      </div>
+
+      <div class="project-list">
+        <!-- Project 1 -->
+        <div class="project-card card" onclick="toggleProject(this)">
+          <div class="project-summary">
+            <div>
+              <span class="proj-badge">M.Tech Thesis Project</span>
+              <h3>Biosynthesis of Nanoparticles & Evaluation of Immunomodulatory and Anti-Inflammatory Responses</h3>
+              <p class="proj-desc">Investigated immunomodulatory properties of biosynthesized therapeutic formulations using in vitro RAW 264.7 macrophage models.</p>
+              <div class="tag-row">
+                <span class="badge">RAW 264.7 Assays</span>
+                <span class="badge">GC-MS SITRA Profiling</span>
+                <span class="badge">Silver Nanoparticles</span>
+              </div>
+            </div>
+            <span class="action-prompt">Click to expand ▾</span>
+          </div>
+          <div class="project-details">
+            <hr class="divider"/>
+            <p><strong>Institution:</strong> Karunya Institute of Technology and Sciences (2025 – 2026)</p>
+            <ul>
+              <li>Conducted quantitative cellular assays evaluating macrophage cell viability, cytoprotection, and suppression of inflammatory cascades.</li>
+              <li>Coordinated GC-MS metabolite profiling with SITRA to isolate biochemical compounds driving functional bioactivity.</li>
+              <li>Synthesized silver nanoparticles via <em>Xenorhabdus stockiae</em> mediator systems for targeted anti-inflammatory screening.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card card" onclick="toggleProject(this)">
+          <div class="project-summary">
+            <div>
+              <span class="proj-badge">Cancer Biology Project</span>
+              <h3>Non-Canonical Functions of Telomerase in Mitochondria</h3>
+              <p class="proj-desc">Analyzed mitochondrial stress response and mitophagy dynamics using mitoKeima assays in U-2 OS osteosarcoma models.</p>
+              <div class="tag-row">
+                <span class="badge">TERT Pathway</span>
+                <span class="badge">mitoKeima Assays</span>
+                <span class="badge">Mitochondrial Mitophagy</span>
+              </div>
+            </div>
+            <span class="action-prompt">Click to expand ▾</span>
+          </div>
+          <div class="project-details">
+            <hr class="divider"/>
+            <p><strong>Focus:</strong> Cancer Cell Survival & Metabolic Resilience</p>
+            <ul>
+              <li>Investigated the non-canonical extra-telomeric role of Telomerase Reverse Transcriptase (TERT) under oxidative insult.</li>
+              <li>Quantified mitophagy response in osteosarcoma lines using fluorescence microscopy and cellular viability markers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card card" onclick="toggleProject(this)">
+          <div class="project-summary">
+            <div>
+              <span class="proj-badge">International Fellowship</span>
+              <h3>Alliin-Alliinase Microparticles Against Escherichia coli Biofilms</h3>
+              <p class="proj-desc">Developed and evaluated spray-dried microparticle delivery systems for in situ allicin generation and biofilm disruption.</p>
+              <div class="tag-row">
+                <span class="badge">UCT Prague</span>
+                <span class="badge">Spray Drying</span>
+                <span class="badge">Biofilm Eradication</span>
+              </div>
+            </div>
+            <span class="action-prompt">Click to expand ▾</span>
+          </div>
+          <div class="project-details">
+            <hr class="divider"/>
+            <p><strong>Institution:</strong> Laboratory of Biomimetic Engineering, University of Chemistry and Technology, Prague (Jul 2025 – Sep 2025)</p>
+            <ul>
+              <li>Engineered microencapsulated alliin and alliinase enzyme complexes using spray drying for controlled antimicrobial release.</li>
+              <li>Conducted microbiological assays and crystal violet biofilm quantifications against stubborn <em>E. coli</em> colonies.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL TIMELINE & EXPERIENCE -->
+    <section class="section">
+      <div class="section-top">
+        <div>
+          <span class="sub-label">Professional timeline</span>
+          <h2 class="section-title">Experience & Training</h2>
+        </div>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-row">
+          <div class="timeline-badge-col">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="timeline-content card">
+            <div class="timeline-head">
+              <div>
+                <h4>Student Exchange Intern — Laboratory of Biomimetic Engineering</h4>
+                <p class="location-sub">UCT Prague, Czech Republic</p>
+              </div>
+              <span class="pill-year">Jul 2025 – Sep 2025</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Synthesized spray-dried biomimetic microparticles for controlled antibacterial delivery.</li>
+              <li>Engineered enzyme-substrate systems targeting multi-species bacterial biofilms.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-badge-col">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="timeline-content card">
+            <div class="timeline-head">
+              <div>
+                <h4>Microbial Techniques Trainee</h4>
+                <p class="location-sub">Azyme Biotech, Bangalore</p>
+              </div>
+              <span class="pill-year">June 2023</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Performed microbiological isolation, culturing, and biochemical verification of clinical microorganisms.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-badge-col">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="timeline-content card">
+            <div class="timeline-head">
+              <div>
+                <h4>Laboratory Techniques Trainee</h4>
+                <p class="location-sub">Nichi-In Centre for Regenerative Medicine, Chennai</p>
+              </div>
+              <span class="pill-year">May 2022</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Acquired practical training in mammalian cell culture, Class III Biosafety Cabinet handling, and aseptic protocols.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section">
+      <div class="section-top">
+        <div>
+          <span class="sub-label">Academic background</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+      </div>
+
+      <div class="education-grid">
+        <div class="card edu-card">
+          <span class="pill-year">2024 – 2026</span>
+          <h4>M.Tech in Biotechnology</h4>
+          <p class="edu-inst">Karunya Institute of Technology and Sciences</p>
+          <p class="edu-score">First-Class Distinction with Rank Holder · 85.3%</p>
+          <p class="edu-desc">Thesis: Biosynthesis of nanoparticles, functional characterization, and anti-inflammatory screening in macrophage models.</p>
+        </div>
+
+        <div class="card edu-card">
+          <span class="pill-year">2020 – 2024</span>
+          <h4>B.Tech in Biotechnology</h4>
+          <p class="edu-inst">Karunya Institute of Technology and Sciences</p>
+          <p class="edu-score">First-Class Distinction · 84.6%</p>
+          <p class="edu-desc">Coursework in Molecular Biology, Immunology, Bioprocess Engineering, and Downstream Processing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS & AWARDS -->
+    <section class="section">
+      <div class="two-column-split">
+        <div>
+          <span class="sub-label">Research output</span>
+          <h2 class="section-title">Publications & Preprints</h2>
+          <div class="card pub-box">
+            <span class="badge">Peer-Reviewed Article</span>
+            <p class="pub-title">An Exploratory In Silico Screening of Potentially Deleterious Single Nucleotide Polymorphisms in the Human CDH1 Gene</p>
+            <p class="pub-meta">International Journal of Drug Delivery Technology (2026)</p>
+          </div>
+          <div class="card pub-box">
+            <span class="badge">Preprint</span>
+            <p class="pub-title">Emodin as a Multi-Target Modulator of Tumor Angiogenesis: Mechanisms, Microenvironment, and Therapeutic Potential</p>
+            <p class="pub-meta">Cambridge Open Engage (2026)</p>
+          </div>
+        </div>
+
+        <div>
+          <span class="sub-label">Recognition</span>
+          <h2 class="section-title">Awards & Funding</h2>
+          <div class="card honors-card">
+            <ul class="styled-award-list">
+              <li><strong>UGC National Scholarship for Postgraduate Studies (NSPG)</strong> (2024–2026)</li>
+              <li><strong>IAESTE International Fellowship Award</strong> — UCT Prague, Czech Republic (2025)</li>
+              <li><strong>Graduate Aptitude Test in Engineering (GATE)</strong> — Biotechnology Qualified (2025)</li>
+              <li><strong>Specialized Laboratory Techniques Shortlist</strong> — IIT Madras (2026)</li>
+              <li><strong>Karunya Merit Scholarship</strong> (2020–2024)</li>
+              <li><strong>MSME Idea Hackathon 4.0</strong> — National Innovation Presenter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMMUNOLOGY SCI-FI GAME (ANANYAA PORTFOLIO STYLE) -->
+    <section class="section">
+      <div class="game-box-card">
+        <div class="game-meta-header">
+          <div>
+            <span class="game-kicker">Need a break?</span>
+            <h3 class="game-headline">CAR-T Pathogen Evade & Strike</h3>
+            <p class="game-instruction">You are a genetically engineered CAR-T cell. Evade immunosuppressive pathogens and neutralize tumor targets. Use <strong>[W/S]</strong> or <strong>[↑/↓]</strong> to dodge, <strong>[Spacebar]</strong> to fire cytotoxic granzymes.</p>
+          </div>
+          <div class="score-display">
+            <div>BEST <span id="game-high">00000</span></div>
+            <div>SCORE <span id="game-score">00000</span></div>
+          </div>
+        </div>
+
+        <div class="canvas-wrapper">
+          <canvas id="gameCanvas" width="780" height="165"></canvas>
+          <div id="game-overlay" class="game-overlay">
+            <div class="overlay-modal">
+              <h3 id="overlay-msg">CAR-T RECEPTORS ARMED</h3>
+              <p>Ready to deploy into the tumor microenvironment?</p>
+              <button onclick="startGame()" class="btn-play">START IMMUNO-RUN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>2026 © Jasmine Steffi A — All rights reserved</p>
+        <div class="footer-links">
+          <a href="mailto:jasminesteffi29@gmail.com">Email</a>
+          <a href="assets/resume.pdf" download>CV</a>
+        </div>
+      </div>
+    </footer>
+  </main>
 
   <script src="game.js"></script>
   <script>
-    function toggleCard(header) {
-      const card = header.parentElement;
-      card.classList.toggle('active');
-      const btn = header.querySelector('.expand-btn');
-      btn.innerText = card.classList.contains('active') ? 'Collapse' : 'Expand';
+    function toggleProject(card) {
+      card.classList.toggle('expanded');
+      const prompt = card.querySelector('.action-prompt');
+      prompt.innerText = card.classList.contains('expanded') ? 'Click to collapse ▴' : 'Click to expand ▾';
     }
   </script>
 </body>
